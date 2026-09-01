@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pide tu concreto | Cautiva Concretos</title>
+<meta name="description" content="Solicita tu pedido de concreto premezclado en Tacna. Llena el formulario y coordina con Cautiva por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+  <nav class="nav">
+    <img class="logo-mark" src="images/nuevo logo.png" alt="Cautiva Concretos">
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="pedido.html" class="active">Pide con nosotros</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="ubicacion.html">Ubicación</a>
+    </div>
+    <a class="nav-cta" href="https://wa.me/51944440455" target="_blank" rel="noopener">Escríbenos →</a>
+  </nav>
+</header>
+
+<!--Pedidos-->
+<section id="pedido">
+  <div class="wrap pedido-grid">
+
+    <!-- FILA 1: pasos, ancho completo -->
+    <div class="reveal pedido-intro">
+      <div class="eyebrow">Solicita tu material</div>
+      <h2 style="font-size:clamp(1.9rem,3vw,2.5rem);">Pide tu concreto en minutos</h2>
+      <p style="margin-top:16px; font-size:16.5px;">Completa los datos de tu obra y te enviamos el pedido directo a nuestro equipo por WhatsApp. Coordinamos contigo la mezcla, el volumen y la fecha de vaciado.</p>
+      <div class="ubi-facts" style="margin-top:36px;">
+        <div class="ubi-fact">
+          <div class="ico">1</div>
+          <div><h4>Llena el formulario</h4><p>Cuéntanos qué necesitas y para cuándo.</p></div>
+        </div>
+        <div class="ubi-fact">
+          <div class="ico">2</div>
+          <div><h4>Se abre WhatsApp</h4><p>Tu pedido llega listo, sin necesidad de escribir todo de nuevo.</p></div>
+        </div>
+        <div class="ubi-fact">
+          <div class="ico">3</div>
+          <div><h4>Confirmamos contigo</h4><p>Coordinamos despacho, bombeo y forma de pago.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILA 2, columna izquierda: la ilustración, debajo de los pasos -->
+    <div class="señal-cautiva reveal">
+      <img class="imagen-formulario" src="images/señalar-formulario.svg" alt="Personal de Cautiva señalando el formulario de pedido" title="Llena el formulario">
+    </div>
+
+    <!-- FILA 2, columna derecha: el formulario, al costado de la imagen -->
+    <form class="pedido-card reveal" id="pedido-form">
+      <div class="pf-row">
+        <div class="pf-field">
+          <label for="pf-nombre">Nombre completo *</label>
+          <input type="text" id="pf-nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+        </div>
+        <div class="pf-field">
+          <label for="pf-telefono">Teléfono *</label>
+          <input type="tel" id="pf-telefono" name="telefono" required placeholder="9XX XXX XXX">
+        </div>
+      </div>
+
+      <div class="pf-field">
+        <label for="pf-direccion">Dirección de la obra *</label>
+        <input type="text" id="pf-direccion" name="direccion" required placeholder="Calle, número, distrito">
+      </div>
+
+      <div class="pf-field">
+        <label for="pf-comentarios">Comentarios adicionales</label>
+        <textarea id="pf-comentarios" name="comentarios" rows="3" placeholder="Acceso a la obra, referencia, forma de pago, etc."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-solid pf-submit">
+        Enviar pedido por WhatsApp
+      </button>
+      <p class="pf-note">Se abrirá WhatsApp con tu pedido ya redactado, listo para enviar a nuestro equipo.</p>
+    </form>
+
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
