@@ -1,0 +1,15 @@
+# Sistema operativo
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+Desktop.ini
+[Dd]esktop.ini
+.DS_Store
+
+# Editores y temporales
+.vscode/
+.idea/
+*.swp
+*~

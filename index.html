@@ -3,12 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cautiva Concretos | Expertos en concreto — Tacna</title>
+<title>Cautiva Concretos | Expertos en Concreto Premezclado — Tacna</title>
 <meta name="description" content="Cautiva Concretos: producción y distribución de concreto premezclado de alta calidad en Tacna, Perú. Control de calidad, bombeo y asesoría permanente en obra.">
+<link rel="canonical" href="https://www.cautivaconcretos.com/index.html">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Cautiva Concretos">
+<meta property="og:title" content="Cautiva Concretos | Expertos en Concreto Premezclado en Tacna">
+<meta property="og:description" content="Concreto premezclado de alta calidad con control técnico en laboratorio, flota propia y despacho puntual en Tacna.">
+<meta property="og:image" content="https://www.cautivaconcretos.com/images/1.jpg">
+<meta property="og:url" content="https://www.cautivaconcretos.com/index.html">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/proyectos.css">
+
+<style>
+.service-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--charcoal);
+}
+
+.service-features-list li span {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.resistencia-interactive {
+  margin-top: 36px;
+}
+
+.resistencia-detail-box {
+  background: #ffffff;
+  border: 1.5px solid var(--concrete-200);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 10px 24px -10px rgba(28,24,21,0.08);
+}
+
+.resistencia-detail-text h4 {
+  font-size: 1.35rem;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.resistencia-detail-text p {
+  font-size: 14.5px;
+  color: var(--charcoal-soft);
+  max-width: 580px;
+}
+
+.r-col {
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.r-col:hover {
+  transform: translateY(-4px);
+  background: rgba(250, 247, 241, 0.08);
+  border-top-color: var(--yellow);
+}
+
+.r-col.active {
+  background: rgba(250, 247, 241, 0.08);
+  border-color: rgba(250, 247, 241, 0.22);
+  border-top: 4px solid var(--yellow);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -10px rgba(255, 210, 48, 0.2);
+}
+
+.r-col.active .label {
+  color: var(--concrete-400);
+  font-weight: 500;
+}
+</style>
 </head>
 
 <body>
@@ -28,76 +118,104 @@
 
 <!-- HERO -->
 <section class="hero">
+  <!-- Video de fondo a pantalla completa en todo el Hero -->
+  <div class="hero-video-bg">
+    <video autoplay muted loop playsinline poster="images/1.jpg">
+      <source src="videos/video_cautiva_fondo.MP4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+  </div>
+
   <div class="wrap hero-grid">
-    <div class="reveal in">
+    <div class="hero-content reveal in">
       <div class="hero-tag">Tacna · Perú</div>
       <h1>Concreto premezclado<br>que sostiene <em>Tacna.</em></h1>
-      <p class="lead">Producimos y distribuimos concreto premezclado de alta calidad, con control técnico permanente y entregas puntuales en cada obra.</p>
+      <p class="lead">Producimos y distribuimos concreto premezclado de alta calidad, con dosificación computarizada, control permanente de probetas y flota propia de camiones mixer.</p>
+      
       <div class="hero-ctas">
-        <a class="btn btn-solid" href="tel:944440455">Llamar ahora</a>
-        <a class="btn btn-ghost" href="https://wa.me/51944440455" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn-solid" href="#pedido">Cotizar</a>
+        <a class="btn btn-solid" href="pedido.html">Pide tu concreto ahora →</a>
+        <a class="btn btn-ghost" href="proyectos.html">Ver proyectos</a>
+        <a class="btn btn-wsp" href="https://wa.me/51944440455" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          WhatsApp Directo
+        </a>
       </div>
     </div>
+
     <div class="hero-visual reveal in">
       <div class="plate"></div>
-      <img src="images/cautiva-auto.png" alt="Mixer de concreto Cautiva">
+      <img src="images/cautiva-auto.png" alt="Camión Mixer de Concreto Cautiva Tacna">
     </div>
   </div>
+
   <div class="hero-strip">
     <div class="wrap">
-      <div class="cell"><span class="num">01</span><span class="txt">Concreto premezclado bajo norma técnica</span></div>
-      <div class="cell"><span class="num">02</span><span class="txt">Control de calidad y diseño de mezcla</span></div>
-      <div class="cell"><span class="num">03</span><span class="txt">Bombeo y asesoría permanente en obra</span></div>
-      <div class="cell"><span class="num">04</span><span class="txt">Flota propia, entregas puntuales</span></div>
+      <div class="cell"><span class="num">01</span><span class="txt">Concreto premezclado bajo norma técnica NTP y ASTM</span></div>
+      <div class="cell"><span class="num">02</span><span class="txt">Control de calidad y diseño de mezcla en laboratorio</span></div>
+      <div class="cell"><span class="num">03</span><span class="txt">Servicio de bombeo y asesoría técnica en obra</span></div>
+      <div class="cell"><span class="num">04</span><span class="txt">Flota propia con mixer, entregas 100% puntuales</span></div>
     </div>
   </div>
 </section>
 
-
 <!-- SERVICIOS -->
 <section id="servicios">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="section-head reveal in">
       <div class="eyebrow">Lo que hacemos</div>
-      <h2>Nuestros servicios</h2>
+      <h2>Nuestros servicios especializados</h2>
     </div>
 
-    <div class="servicio-row reveal">
+    <div class="servicio-row reveal in">
       <div class="img-col">
         <span class="index-tag">01</span>
-        <img src="images/servicio1.jpg" alt="Bombeo de concreto premezclado">
+        <img src="images/servicio1.jpg" alt="Venta y vaciado de concreto premezclado">
       </div>
       <div class="txt-col">
-        <h3>Venta de concreto premezclado</h3>
-        <p>Contamos con maquinaria y equipos modernos para suministrar concreto premezclado. Nuestros productos cumplen con las normas nacionales e internacionales que garantizan un gran desempeño de calidad. Además, nuestros clientes cuentan con servicio personalizado y asesoramiento permanente durante la ejecución de la obra.</p>
+        <h3>Venta y Distribución de Concreto Premezclado</h3>
+        <p>Contamos con maquinaria moderna para suministrar concreto premezclado en toda Tacna. Diseñamos la mezcla exacta para losas aligeradas, zapatas, vigas, columnas y pavimentos de alto rendimiento.</p>
+        <ul class="service-features-list">
+          <li><span>✓</span> Dosificación exacta de áridos, cementos Yura/CBB y aditivos Sika.</li>
+          <li><span>✓</span> Transporte en camiones mixer con agitación permanente.</li>
+          <li><span>✓</span> Servicio de bomba de concreto para vaciados en altura.</li>
+        </ul>
+        <div style="margin-top:24px;">
+          <a class="btn btn-solid" href="pedido.html">Cotizar este servicio →</a>
+        </div>
       </div>
     </div>
 
-    <div class="servicio-row rev reveal">
+    <div class="servicio-row rev reveal in">
       <div class="img-col">
         <span class="index-tag">02</span>
         <img src="images/servicio2.jpg" alt="Control de calidad de concreto en obra">
       </div>
       <div class="txt-col">
-        <h3>Servicio de control de calidad</h3>
-        <p>Contamos con un staff de profesionales expertos en el manejo del concreto. Realizamos estudios de agregados y diseño de mezcla de acuerdo a la necesidad del cliente, brindando una gama de alternativas que ayudan a optimizar los avances de obra.</p>
+        <h3>Control de Calidad y Asesoría Técnica en Obra</h3>
+        <p>Nuestro equipo de especialistas en tecnología del concreto te acompaña desde la planificación hasta el fraguado. Realizamos ensayos de granulometría, control de asentamiento (slump) y moldeo de probetas.</p>
+        <ul class="service-features-list">
+          <li><span>✓</span> Ensayos de cono de Abrams a pie de obra.</li>
+          <li><span>✓</span> Toma de testigos cilíndricos para prueba de rotura en prensa.</li>
+          <li><span>✓</span> Asesoramiento en proceso de vibrado, encofrado y curado.</li>
+        </ul>
+        <div style="margin-top:24px;">
+          <a class="btn btn-ghost" href="nosotros.html">Conoce nuestros procesos →</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
 <!-- BOTONES INTERACTIVOS / NAVEGACIÓN -->
 <section class="interactive-nav-section" id="explora">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="section-head reveal in">
       <div class="eyebrow">Explora Cautiva</div>
       <h2>Accesos directos</h2>
       <p style="margin-top:14px;">Gestiona tu pedido de concreto premezclado, conoce nuestras obras entregadas, nuestro equipo y ubica nuestra planta en Tacna.</p>
     </div>
 
-    <div class="interactive-grid reveal">
+    <div class="interactive-grid reveal in">
       <!-- 1. PEDIDO -->
       <a href="pedido.html" class="interactive-card card-pedido" id="btn-nav-pedido">
         <div class="card-head">
@@ -213,61 +331,154 @@
   </div>
 </section>
 
+<!-- PROYECTOS DESTACADOS PREVIEW -->
+<section style="padding: 80px 0; background: #ffffff; border-top: 1px solid var(--line);">
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:36px;" class="reveal in">
+      <div>
+        <div class="eyebrow">Portafolio en Tacna</div>
+        <h2>Obras Destacadas</h2>
+      </div>
+      <a class="btn btn-ghost" href="proyectos.html">Ver todas las obras (10) →</a>
+    </div>
+
+    <div class="projects-grid reveal in">
+      <!-- Proyecto 1 -->
+      <a href="proyectos.html" class="project-card">
+        <div class="card-bg">
+          <img src="images/p-colegio.jpg" alt="Colegio Luis Alberto Sánchez" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Educación</div>
+        <div class="card-body">
+          <h3 class="card-title">Colegio Luis Alberto Sánchez</h3>
+          <div class="card-action">
+            <span>Ver Proyecto</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Proyecto 2 -->
+      <a href="proyectos.html" class="project-card">
+        <div class="card-bg">
+          <img src="images/p-avmunicipal.jpg" alt="Proyecto Av. Municipal" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Infraestructura</div>
+        <div class="card-body">
+          <h3 class="card-title">Proyecto Av. Municipal</h3>
+          <div class="card-action">
+            <span>Ver Proyecto</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Proyecto 3 -->
+      <a href="proyectos.html" class="project-card">
+        <div class="card-bg">
+          <img src="images/p-takanabeach.jpg" alt="Takana Beach" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Comercial</div>
+        <div class="card-body">
+          <h3 class="card-title">Takana Beach</h3>
+          <div class="card-action">
+            <span>Ver Proyecto</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- RESISTENCIA -->
 <section id="resistencia" class="resistencia">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="section-head reveal in">
       <div class="eyebrow">Ficha técnica</div>
-      <h2>Resistencia del concreto</h2>
-      <p style="margin-top:14px;">Cada obra exige una mezcla distinta. Elegimos la resistencia según el elemento estructural que vas a construir.</p>
+      <h2>Resistencia del concreto (f'c)</h2>
+      <p style="margin-top:14px;">Haz clic en una resistencia para conocer su uso recomendado y solicitar cotización inmediata.</p>
     </div>
-    <div class="r-table reveal">
-      <div class="r-col">
+
+    <div class="r-table reveal in">
+      <div class="r-col" data-kg="100" data-app="Solados, cimientos corridos y pisos simples sin exigencia estructural." data-uso="Ideal para nivelación de zanjas y bases protectoras antes del armado de acero.">
         <div class="label">Resistencia</div>
         <div class="kg">100 <span>kg/cm²</span></div>
         <div class="bar" style="height:26px;"></div>
         <div class="app">Cimientos y pisos</div>
       </div>
-      <div class="r-col">
+      <div class="r-col" data-kg="175" data-app="Sobrecimientos, pisos industriales livianos, veredas y sardineles." data-uso="Mezcla estándar para obras viales peatonales y confinamientos livianos.">
         <div class="label">Resistencia</div>
         <div class="kg">175 <span>kg/cm²</span></div>
         <div class="bar" style="height:46px;"></div>
-        <div class="app">Sobrecimientos, pisos y veredas</div>
+        <div class="app">Sobrecimientos y veredas</div>
       </div>
-      <div class="r-col">
+      <div class="r-col active" data-kg="210" data-app="Zapatas, columnas, vigas, placas y losas aligeradas (la mezcla más solicitada en edificación)." data-uso="Estándar reglamentario de la Norma Técnica Peruana E.060 para estructuras sismorresistentes.">
         <div class="label">Resistencia</div>
         <div class="kg">210 <span>kg/cm²</span></div>
         <div class="bar" style="height:66px;"></div>
-        <div class="app">Zapatas, columnas, placas y losas aligeradas</div>
+        <div class="app">Zapatas, columnas y losas</div>
       </div>
-      <div class="r-col">
+      <div class="r-col" data-kg="280" data-app="Vigas principales de gran luz, losas macizas, puentes y muros de contención." data-uso="Alta durabilidad y resistencia inicial acelerada para desencofrados más rápidos.">
         <div class="label">Resistencia</div>
         <div class="kg">280 <span>kg/cm²</span></div>
         <div class="bar" style="height:86px;"></div>
         <div class="app">Vigas y losas macizas</div>
       </div>
     </div>
+
+    <!-- Caja interactiva de detalle de resistencia -->
+    <div class="resistencia-detail-box reveal in" id="resistencia-detail-box">
+      <div class="resistencia-detail-text">
+        <h4 id="r-detail-title">Concreto f'c 210 kg/cm²</h4>
+        <p id="r-detail-desc">Zapatas, columnas, vigas, placas y losas aligeradas (la mezcla más solicitada en edificación). Estándar reglamentario de la Norma Técnica Peruana E.060 para estructuras sismorresistentes.</p>
+      </div>
+      <a class="btn btn-solid" id="r-detail-btn" href="pedido.html">Pedir mezcla f'c 210 kg/cm² →</a>
+    </div>
+
   </div>
 </section>
-
 
 <!-- COLABORADORES -->
 <section class="colab-band">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="section-head reveal in">
       <div class="eyebrow">Trabajamos con</div>
-      <h2>Nuestros colaboradores</h2>
+      <h2>Nuestros colaboradores estratégicos</h2>
     </div>
-    <div class="colab-flex reveal">
-      <div class="colab-logos">
-        <img src="images/sp-yura.jpg" alt="Cemento Yura">
-        <img src="images/sp-cbb.png" alt="CBB Cementos">
-        <img src="images/sp-sika.png" alt="Sika, construyendo confianza">
+    <div class="colab-flex reveal in">
+      <div class="colab-left-block">
+        <p class="colab-intro-txt">Respaldados por las marcas líderes en tecnología de cemento y aditivos para la construcción a nivel nacional e internacional.</p>
+        <div class="colab-logos">
+          <img src="images/sp-yura.jpg" alt="Cemento Yura">
+          <img src="images/sp-cbb.png" alt="CBB Cementos">
+          <img src="images/sp-sika.png" alt="Sika, construyendo confianza">
+        </div>
       </div>
       <div class="colab-extra">
-        <div class="chip"><img src="images/materiales.jpg" alt="Agregados seleccionados"><span>Agregados<br>seleccionados</span></div>
-        <div class="chip"><img src="images/watertruck.jpg" alt="Cisterna de agua"><span>Cisterna<br>propia</span></div>
+        <div class="chip">
+          <img src="images/materiales.jpg" alt="Agregados seleccionados">
+          <div class="chip-text">
+            <strong>Agregados seleccionados</strong>
+            <span>Control granulométrico estricto de arena y piedra para asegurar la curva de resistencia ideal en cada diseño de mezcla.</span>
+          </div>
+        </div>
+        <div class="chip">
+          <img src="images/watertruck.jpg" alt="Cisterna de agua">
+          <div class="chip-text">
+            <strong>Cisterna propia</strong>
+            <span>Flota de abastecimiento permanente y agua tratada para control de fraguado continuo en obra y planta.</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -276,26 +487,30 @@
 <!-- UBICACION -->
 <section id="ubicacion">
   <div class="wrap ubicacion-grid">
-    <div class="reveal">
+    <div class="reveal in">
       <div class="eyebrow">Cómo llegar</div>
       <h2 style="font-size:clamp(1.9rem,3vw,2.5rem);">Ubícanos en Tacna</h2>
       <div class="ubi-facts">
         <div class="ubi-fact">
           <div class="ico">◈</div>
-          <div><h4>Paradero de la ruta 1, cuadras mas abajo</h4><p>Referencia principal para llegar a planta, sobre Av. Municipal, Viñani.</p></div>
+          <div><h4>Paradero de la ruta 1, cuadras más abajo</h4><p>Sobre Av. Municipal, Viñani — Tacna, Perú.</p></div>
         </div>
         <div class="ubi-fact">
           <div class="ico">☎</div>
-          <div><h4>944 440 455 - 977 460 112</h4><p>Atención comercial y coordinación de despacho.</p></div>
+          <div><h4>944 440 455 · 977 460 112</h4><p>Atención comercial y coordinación de despacho inmediato.</p></div>
         </div>
         <div class="ubi-fact">
           <div class="ico">◷</div>
           <div><h4>Despacho todos los días</h4><p>Coordinamos el horario de vaciado según tu cronograma de obra.</p></div>
         </div>
       </div>
+      <div style="margin-top:28px;">
+        <a class="btn btn-solid" href="ubicacion.html">Ver plano y referencias →</a>
+      </div>
     </div>
-<div class="reveal map-frame">
-    <iframe 
+    
+    <div class="reveal in map-frame">
+      <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15172.029442490299!2d-70.25413546969429!3d-18.071213985654094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ac948fcddae1f%3A0x9584c20956ef4792!2sCautiva%20Concretos!5e0!3m2!1ses!2spe!4v1787764236448!5m2!1ses!2spe"
         width="600"
         height="450"
@@ -303,9 +518,9 @@
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="strict-origin-when-cross-origin"
-        title="Mapa Cautiva Concretos">
-    </iframe>
-</div>
+        title="Mapa Planta Cautiva Concretos Tacna">
+      </iframe>
+    </div>
   </div>
 </section>
 
@@ -313,7 +528,7 @@
 <section class="contacto">
   <div class="bg"><img src="images/fondoo.jpg" alt="Equipo Cautiva en obra"></div>
   <div class="wrap contacto-inner">
-    <div class="contacto-top reveal">
+    <div class="contacto-top reveal in">
       <div>
         <h2>Hablemos de<br>tu próximo vaciado.</h2>
         <p class="lead">Cuéntanos el elemento estructural, el volumen y la fecha. Te ayudamos a definir la mezcla correcta para tu obra.</p>
@@ -323,8 +538,8 @@
         <div class="phone-line"><small>También</small>977 460 112</div>
         <div class="social-row">
           <a href="https://wa.me/51944440455" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/whatsapp.png" alt=""></a>
-          <a href="https://www.facebook.com/profile.php?id=100084069887328" aria-label="Facebook"><img src="images/facebook.webp" alt=""></a>
-          <a href="https://www.tiktok.com/@cautiva_pe?is_from_webapp=1&sender_device=pc" aria-label="TikTok"><img src="images/tiktok.png" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=100084069887328" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.webp" alt=""></a>
+          <a href="https://www.tiktok.com/@cautiva_pe?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><img src="images/tiktok.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -336,5 +551,32 @@
 </section>
 
 <script src="js/main.js"></script>
+<script>
+// Selector interactivo de resistencia en index.html
+document.addEventListener('DOMContentLoaded', () => {
+  const rCols = document.querySelectorAll('.r-col');
+  const titleEl = document.getElementById('r-detail-title');
+  const descEl = document.getElementById('r-detail-desc');
+  const btnEl = document.getElementById('r-detail-btn');
+
+  rCols.forEach(col => {
+    col.addEventListener('click', () => {
+      rCols.forEach(c => c.classList.remove('active'));
+      col.classList.add('active');
+
+      const kg = col.getAttribute('data-kg');
+      const app = col.getAttribute('data-app');
+      const uso = col.getAttribute('data-uso');
+
+      if (titleEl) titleEl.textContent = `Concreto f'c ${kg} kg/cm²`;
+      if (descEl) descEl.textContent = `${app} ${uso}`;
+      if (btnEl) {
+        btnEl.textContent = `Pedir mezcla f'c ${kg} kg/cm² →`;
+        btnEl.href = `pedido.html`;
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>

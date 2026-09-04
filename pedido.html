@@ -3,12 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pide tu concreto | Cautiva Concretos</title>
-<meta name="description" content="Solicita tu pedido de concreto premezclado en Tacna. Llena el formulario y coordina con Cautiva por WhatsApp.">
+<title>Pide tu Concreto Premezclado | Cautiva Concretos — Tacna</title>
+<meta name="description" content="Solicita tu cotización de concreto premezclado en Tacna. Cotiza rápido por WhatsApp con Cautiva: atención directa, asesoría técnica y despacho puntual.">
+<link rel="canonical" href="https://www.cautivaconcretos.com/pedido.html">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Cautiva Concretos">
+<meta property="og:title" content="Pide tu Concreto Premezclado | Cautiva Concretos">
+<meta property="og:description" content="Solicita concreto premezclado de alta calidad en Tacna con asesoría técnica y flota propia.">
+<meta property="og:image" content="https://www.cautivaconcretos.com/images/1.jpg">
+<meta property="og:url" content="https://www.cautivaconcretos.com/pedido.html">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pedido.css">
 </head>
 
 <body>
@@ -26,68 +38,228 @@
   </nav>
 </header>
 
-<!--Pedidos-->
-<section id="pedido">
-  <div class="wrap pedido-grid">
+<!-- HERO -->
+<section class="pedido-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> <span>/</span> <span>Pide con nosotros</span></div>
+    <div class="eyebrow">Cotización y Despacho</div>
+    <h1>Solicita tu concreto premezclado en Tacna.</h1>
+    <p class="lead">Completa los datos de tu obra en este sencillo formulario. Te enviamos la cotización y coordinación de despacho directo a WhatsApp.</p>
+  </div>
+</section>
 
-    <!-- FILA 1: pasos, ancho completo -->
-    <div class="reveal pedido-intro">
-      <div class="eyebrow">Solicita tu material</div>
-      <h2 style="font-size:clamp(1.9rem,3vw,2.5rem);">Pide tu concreto en minutos</h2>
-      <p style="margin-top:16px; font-size:16.5px;">Completa los datos de tu obra y te enviamos el pedido directo a nuestro equipo por WhatsApp. Coordinamos contigo la mezcla, el volumen y la fecha de vaciado.</p>
-      <div class="ubi-facts" style="margin-top:36px;">
-        <div class="ubi-fact">
-          <div class="ico">1</div>
-          <div><h4>Llena el formulario</h4><p>Cuéntanos qué necesitas y para cuándo.</p></div>
+<!-- SECCIÓN PRINCIPAL DE PEDIDO -->
+<section class="pedido-main-section">
+  <div class="wrap">
+
+    <div class="pedido-layout-grid">
+      
+      <!-- COLUMNA IZQUIERDA: BANNER VISUAL + FORMULARIO PRINCIPAL -->
+      <div class="form-container-wrap">
+
+        <!-- BANNER CON IMAGEN SEÑALANDO AL FORMULARIO -->
+        <div class="pedido-pointer-banner reveal in">
+          <div class="pointer-badge-img">
+            <img src="images/señalar-formulario.svg" onerror="this.onerror=null; this.src='images/señalando-cautiva.jpg';" alt="Equipo Cautiva Concretos señalando el formulario" class="char-pointer-img">
+          </div>
+          <div class="pointer-badge-content">
+            <span class="pointer-pill"> Cotización Rápida & Directa</span>
+            <h3>¡Déjanos tus datos de obra aquí!</h3>
+            <p>Indícanos tu contacto, ubicación y fecha estimada. Nuestro equipo te responderá de inmediato con la mejor propuesta técnica.</p>
+            <div class="pointer-arrow-indicator">
+              <span> Completa los datos aquí abajo</span>
+            </div>
+          </div>
         </div>
-        <div class="ubi-fact">
-          <div class="ico">2</div>
-          <div><h4>Se abre WhatsApp</h4><p>Tu pedido llega listo, sin necesidad de escribir todo de nuevo.</p></div>
+
+        <form class="pedido-form-card reveal in" id="pedido-form" novalidate>
+          
+          <!-- PASO 1: DATOS DE CONTACTO -->
+          <div class="form-section-block">
+            <div class="form-step-title">
+              <span>01</span> Datos de Contacto
+            </div>
+            <div class="pf-row">
+              <div class="pf-field">
+                <label for="pf-nombre">Nombre y Apellidos *</label>
+                <input type="text" id="pf-nombre" name="nombre" required placeholder="Ej. Ing. Carlos Mendoza">
+              </div>
+              <div class="pf-field">
+                <label for="pf-telefono">Teléfono / WhatsApp *</label>
+                <input type="tel" id="pf-telefono" name="telefono" required placeholder="Ej. 944 440 455">
+              </div>
+            </div>
+            <div class="pf-field">
+              <label for="pf-empresa">Empresa o Nombre de Obra <small>(Opcional)</small></label>
+              <input type="text" id="pf-empresa" name="empresa" placeholder="Ej. Constructora Santa Rosa / Vivienda Familiar">
+            </div>
+          </div>
+
+          <!-- PASO 2: DIRECCIÓN O REFERENCIA DE OBRA -->
+          <div class="form-section-block">
+            <div class="form-step-title">
+              <span>02</span> Ubicación de la Obra
+            </div>
+            
+            <div class="pf-field">
+              <label for="pf-direccion">Dirección o Referencia de Obra en Tacna *</label>
+              <input type="text" id="pf-direccion" name="direccion" required placeholder="Ej. Av. Municipal / Viñani / Pocollay / Cercado de Tacna">
+            </div>
+
+            <div class="pf-field" style="margin-top:14px;">
+              <label for="pf-comentarios">Comentarios o Detalles de Obra <small>(Opcional)</small></label>
+              <textarea id="pf-comentarios" name="comentarios" placeholder="Ej. Indicaciones de acceso para camión mixer, piso a vaciar, contacto en obra, etc."></textarea>
+            </div>
+          </div>
+
+          <!-- BOTÓN DE ENVÍO -->
+          <button type="submit" class="pf-submit-btn" id="btn-submit-form">
+            <span>Enviar Pedido por WhatsApp</span>
+          </button>
+          
+          <p class="pf-note" style="margin-top: 14px; text-align: center;">
+            Se abrirá WhatsApp con el pedido redactado listo para coordinar con nuestro equipo de despacho.
+          </p>
+
+        </form>
+      </div>
+
+      <!-- BARRA LATERAL: RESUMEN EN VIVO Y CONTACTO INMEDIATO -->
+      <aside class="pedido-sidebar reveal in">
+        
+        <!-- Tarjeta de Resumen en Vivo -->
+        <div class="live-summary-card">
+          <h4>
+            <span>Resumen de tu Pedido</span>
+            <span class="live-summary-badge">En vivo</span>
+          </h4>
+          
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span class="s-label">Cliente:</span>
+              <span class="s-val" id="sum-nombre">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="s-label">Teléfono:</span>
+              <span class="s-val" id="sum-telefono">—</span>
+            </div>
+            <div class="summary-row">
+              <span class="s-label">Ubicación:</span>
+              <span class="s-val" id="sum-direccion">—</span>
+            </div>
+          </div>
+
+          <p style="font-size:12.5px; color:var(--concrete-700); line-height:1.5; margin-bottom:0;">
+            * La cotización formal incluye transporte en mixer y asesoría técnica en sitio.
+          </p>
         </div>
-        <div class="ubi-fact">
-          <div class="ico">3</div>
-          <div><h4>Confirmamos contigo</h4><p>Coordinamos despacho, bombeo y forma de pago.</p></div>
+
+        <!-- Contacto Telefónico Directo -->
+        <div class="direct-call-box">
+          <div class="call-ico">📞</div>
+          <div>
+            <h5>¿Necesitas atención urgente?</h5>
+            <a href="tel:944440455">944 440 455</a>
+          </div>
+        </div>
+
+        <!-- Garantías Cautiva -->
+        <div class="side-guarantees">
+          <h4>¿Por qué pedir con Cautiva?</h4>
+          <ul>
+            <li><span>✓</span> Dosificación computarizada y precisa.</li>
+            <li><span>✓</span> Ensayos de laboratorio y probetas de testigo.</li>
+            <li><span>✓</span> Flota propia sin retrasos por intermediarios.</li>
+            <li><span>✓</span> Asesoría y acompañamiento en el vaciado.</li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- RECOMENDACIONES DE VACIADO -->
+<section class="vaciado-tips-section">
+  <div class="wrap">
+    <div class="section-head reveal in">
+      <div class="eyebrow">Guía de Obra</div>
+      <h2>Recomendaciones para el Día del Vaciado</h2>
+      <p style="margin-top:10px;">Garantiza un vaciado exitoso y eficiente siguiendo estos pasos técnicos:</p>
+    </div>
+
+    <div class="tips-grid reveal in">
+      <div class="tip-card">
+        <h4>1. Despeje de Acceso</h4>
+        <p>Asegura que el ingreso para el camión mixer esté libre de vehículos u obstáculos con radio de giro adecuado.</p>
+      </div>
+      <div class="tip-card">
+        <h4>2. Encofrado y Humedecimiento</h4>
+        <p>Revisa la estanqueidad de los encofrados y humedece las superficies antes de la llegada del concreto.</p>
+      </div>
+      <div class="tip-card">
+        <h4>3. Vibrado y Curado</h4>
+        <p>Realiza un vibrado continuo para evitar cangrejeras e inicia el curado con agua a las pocas horas del fraguado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto">
+  <div class="bg"><img src="images/fondoo.jpg" alt="Equipo Cautiva en obra"></div>
+  <div class="wrap contacto-inner">
+    <div class="contacto-top reveal in">
+      <div>
+        <h2>Hablemos de<br>tu próximo vaciado.</h2>
+        <p class="lead">Cuéntanos el elemento estructural, el volumen y la fecha. Te ayudamos a definir la mezcla correcta para tu obra.</p>
+      </div>
+      <div class="phone-block">
+        <div class="phone-line"><small>Llámanos</small>944 440 455</div>
+        <div class="phone-line"><small>También</small>977 460 112</div>
+        <div class="social-row">
+          <a href="https://wa.me/51944440455" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/whatsapp.png" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=100084069887328" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.webp" alt=""></a>
+          <a href="https://www.tiktok.com/@cautiva_pe?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><img src="images/tiktok.png" alt=""></a>
         </div>
       </div>
     </div>
-
-    <!-- FILA 2, columna izquierda: la ilustración, debajo de los pasos -->
-    <div class="señal-cautiva reveal">
-      <img class="imagen-formulario" src="images/señalar-formulario.svg" alt="Personal de Cautiva señalando el formulario de pedido" title="Llena el formulario">
+    <div class="foot-rule">
+      <span class="fmini">© <span id="year"></span> Cautiva Concretos — Expertos en concreto. Tacna, Perú.</span>
+      <span class="fmini">Cemento Yura · CBB Cementos · Sika</span>
     </div>
-
-    <!-- FILA 2, columna derecha: el formulario, al costado de la imagen -->
-    <form class="pedido-card reveal" id="pedido-form">
-      <div class="pf-row">
-        <div class="pf-field">
-          <label for="pf-nombre">Nombre completo *</label>
-          <input type="text" id="pf-nombre" name="nombre" required placeholder="Ej. Juan Pérez">
-        </div>
-        <div class="pf-field">
-          <label for="pf-telefono">Teléfono *</label>
-          <input type="tel" id="pf-telefono" name="telefono" required placeholder="9XX XXX XXX">
-        </div>
-      </div>
-
-      <div class="pf-field">
-        <label for="pf-direccion">Dirección de la obra *</label>
-        <input type="text" id="pf-direccion" name="direccion" required placeholder="Calle, número, distrito">
-      </div>
-
-      <div class="pf-field">
-        <label for="pf-comentarios">Comentarios adicionales</label>
-        <textarea id="pf-comentarios" name="comentarios" rows="3" placeholder="Acceso a la obra, referencia, forma de pago, etc."></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-solid pf-submit">
-        Enviar pedido por WhatsApp
-      </button>
-      <p class="pf-note">Se abrirá WhatsApp con tu pedido ya redactado, listo para enviar a nuestro equipo.</p>
-    </form>
-
   </div>
 </section>
 
 <script src="js/main.js"></script>
+<script>
+// Resumen dinámico en vivo en pedido.html
+document.addEventListener('DOMContentLoaded', () => {
+  const nombreInput = document.getElementById('pf-nombre');
+  const telefonoInput = document.getElementById('pf-telefono');
+  const direccionInput = document.getElementById('pf-direccion');
+
+  const sumNombre = document.getElementById('sum-nombre');
+  const sumTelefono = document.getElementById('sum-telefono');
+  const sumDireccion = document.getElementById('sum-direccion');
+
+  if (nombreInput && sumNombre) {
+    nombreInput.addEventListener('input', (e) => {
+      sumNombre.textContent = e.target.value.trim() || '—';
+    });
+  }
+  if (telefonoInput && sumTelefono) {
+    telefonoInput.addEventListener('input', (e) => {
+      sumTelefono.textContent = e.target.value.trim() || '—';
+    });
+  }
+  if (direccionInput && sumDireccion) {
+    direccionInput.addEventListener('input', (e) => {
+      sumDireccion.textContent = e.target.value.trim() || '—';
+    });
+  }
+});
+</script>
 </body>
 </html>

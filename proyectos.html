@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proyectos | Cautiva Concretos — Obras entregadas en Tacna</title>
-<meta name="description" content="Conoce las obras donde Cautiva Concretos ha suministrado concreto premezclado en Tacna: colegios, vías, urbanizaciones y proyectos institucionales.">
-<!-- TODO: reemplaza con tu dominio real una vez publicado el sitio -->
+<meta name="description" content="Conoce las obras donde Cautiva Concretos ha suministrado concreto premezclado en Tacna: colegios, vías públicas, urbanizaciones y proyectos comerciales.">
 <link rel="canonical" href="https://www.cautivaconcretos.com/proyectos.html">
 
 <meta property="og:type" content="website">
@@ -21,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/proyectos.css">
 
 <script type="application/ld+json">
 {
@@ -50,58 +50,393 @@
 </header>
 
 <!-- HERO DE PÁGINA -->
-<section class="page-hero">
+<section class="proyectos-hero">
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html">Inicio</a> <span>/</span> <span>Proyectos</span></div>
-    <div class="eyebrow">Obras entregadas</div>
+    <div class="hero-stats-badge"><span class="dot"></span> Obras Suministradas en Tacna</div>
+    <div class="eyebrow">Portafolio de Obras</div>
     <h1>Proyectos construidos con concreto premezclado Cautiva.</h1>
-    <p class="lead">Desde colegios y vías públicas hasta urbanizaciones y espacios comerciales. Cada obra usa la resistencia y el diseño de mezcla adecuados a su estructura.</p>
+    <p class="lead">Desde colegios y vías públicas hasta urbanizaciones y complejos comerciales. Cada proyecto cuenta con el diseño de mezcla adecuado, control de probetas y asesoría técnica en cada vaciado.</p>
   </div>
 </section>
 
 <!-- GALERÍA DE PROYECTOS -->
-<section id="proyectos">
+<section id="proyectos" class="proyectos-section">
   <div class="wrap">
-    <div class="filter-chips reveal in">
-      <button class="filter-chip active" data-filter="todos">Todos</button>
-      <button class="filter-chip" data-filter="educacion">Educación</button>
-      <button class="filter-chip" data-filter="infraestructura">Infraestructura</button>
-      <button class="filter-chip" data-filter="residencial">Residencial</button>
-      <button class="filter-chip" data-filter="comercial">Comercial</button>
-      <button class="filter-chip" data-filter="estructuras">Estructuras</button>
+    
+    <!-- Filtros de categoría -->
+    <div class="filter-bar-wrapper reveal in">
+      <div class="filter-chips-container">
+        <button class="filter-chip active" data-filter="todos">
+          Todos <span class="count">10</span>
+        </button>
+        <button class="filter-chip" data-filter="educacion">
+          Educación <span class="count">3</span>
+        </button>
+        <button class="filter-chip" data-filter="infraestructura">
+          Infraestructura <span class="count">3</span>
+        </button>
+        <button class="filter-chip" data-filter="residencial">
+          Residencial <span class="count">1</span>
+        </button>
+        <button class="filter-chip" data-filter="comercial">
+          Comercial <span class="count">1</span>
+        </button>
+        <button class="filter-chip" data-filter="estructuras">
+          Estructuras <span class="count">2</span>
+        </button>
+      </div>
+
+      <div class="projects-counter-info">
+        Mostrando <strong id="visible-count">10</strong> de 10 obras
+      </div>
     </div>
 
-    <div class="gallery reveal in">
-      <div class="g-item" data-category="educacion"><img src="images/p-colegio.jpg" alt="Colegio Luis Alberto Sánchez"><div class="g-cap">Colegio Luis Alberto Sánchez</div></div>
-      <div class="g-item" data-category="infraestructura"><img src="images/p-avmunicipal.jpg" alt="Proyecto Av. Municipal"><div class="g-cap">Proyecto Av. Municipal</div></div>
-      <div class="g-item" data-category="infraestructura"><img src="images/p-parquecentral.jpg" alt="Parque Central"><div class="g-cap">Parque Central</div></div>
-      <div class="g-item" data-category="residencial"><img src="images/p-urbafrutales.jpg" alt="Urbanización Los Frutales"><div class="g-cap">Urba. Los Frutales</div></div>
-      <div class="g-item" data-category="educacion"><img src="images/p-camposanto.jpg" alt="Campo Santo Parque del Recuerdo"><div class="g-cap">Campo Santo Parque del Recuerdo</div></div>
-      <div class="g-item" data-category="educacion"><img src="images/p-franciscodeasis.jpg" alt="Francisco de Asís"><div class="g-cap">Francisco de Asís</div></div>
-      <div class="g-item" data-category="educacion"><img src="images/p-coartacna.jpg" alt="Coar Tacna"><div class="g-cap">Coar Tacna</div></div>
-      <div class="g-item" data-category="comercial"><img src="images/p-takanabeach.jpg" alt="Takana Beach"><div class="g-cap">Takana Beach</div></div>
-      <div class="g-item" data-category="estructuras"><img src="images/p-losasaligerada.jpg" alt="Losas aligeradas"><div class="g-cap">Losas aligeradas</div></div>
-      <div class="g-item" data-category="estructuras"><img src="images/p-zapatas.jpg" alt="Zapatas"><div class="g-cap">Zapatas</div></div>
+    <!-- Grid de Proyectos estilo tarjetas con animación hover -->
+    <div class="projects-grid reveal in" id="projects-grid">
+      
+      <!-- Proyecto 1 -->
+      <article class="project-card" 
+        data-category="educacion"
+        data-category-name="Educación"
+        data-title="Colegio Luis Alberto Sánchez"
+        data-image="images/p-colegio.jpg"
+        data-location="Crnl. Gregorio Albarracín, Tacna"
+        data-type="Concreto Estructural fata datos 280 kg/cm²"
+        data-desc="Suministro continuo para losas aligeradas, vigas principales, columnas y patios de formación con estricto control de asentamiento (slump) y resistencia certificada.">
+        <div class="card-bg">
+          <img src="images/p-colegio.jpg" alt="Colegio Luis Alberto Sánchez" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Educación</div>
+        <div class="card-body">
+          <h3 class="card-title">Colegio Luis Alberto Sánchez</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project-card" 
+        data-category="infraestructura"
+        data-category-name="Infraestructura"
+        data-title="Proyecto Av. Municipal"
+        data-image="images/p-avmunicipal.jpg"
+        data-location="Av. Municipal, Tacna"
+        data-type="falta datos, ejemplo Resistencia 210 Kg/cm²"
+        data-desc="Pavimentación de alto tránsito y durabilidad con descarga y vaciado controlado mediante camiones mixer de nuestra flota propia, asegurando un fraguado homogéneo.">
+        <div class="card-bg">
+          <img src="images/av municipal.jpg" alt="Proyecto Av. Municipal" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Infraestructura</div>
+        <div class="card-body">
+          <h3 class="card-title">Proyecto Av. Municipal</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="project-card" 
+        data-category="infraestructura"
+        data-category-name="Infraestructura"
+        data-title="Parque Central"
+        data-image="images/p-parquecentral.jpg"
+        data-location="Tacna"
+        data-type="Concreto Estructural & Veredas datos= 210 kg/cm²"
+        data-desc="Vaciado de veredas peatonales, losas de circulación y muros perimetrales para áreas verdes y recreativas públicas con acabados duraderos.">
+        <div class="card-bg">
+          <img src="images/parque central.jpg" alt="Parque Central" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Infraestructura</div>
+        <div class="card-body">
+          <h3 class="card-title">Parque Central</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 4 -->
+      <article class="project-card" 
+        data-category="residencial"
+        data-category-name="Residencial"
+        data-title="Urba. Los Frutales"
+        data-image="images/p-urbafrutales.jpg"
+        data-location="Pocollay, Tacna"
+        data-type="Concreto para Losas y Muros f'c 210 kg/cm²"
+        data-desc="Desarrollo habitacional con abastecimiento integral para cimentaciones corridas, zapatas y losas de techo en viviendas unifamiliares y multifamiliares.">
+        <div class="card-bg">
+          <img src="images/los frutales.jpg" alt="Urbanización Los Frutales" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Residencial</div>
+        <div class="card-body">
+          <h3 class="card-title">Urba. Los Frutales</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 5 -->
+      <article class="project-card" 
+        data-category="infraestructura"
+        data-category-name="Infraestructura"
+        data-title="Parque del Recuerdo"
+        data-image="images/p-camposanto.jpg"
+        data-location="Tacna"
+        data-type="zapatas - columnas durabilidad 210 kg/cm²"
+        data-desc="Construcción de pabellones, caminerías y estructuras con aditivos especiales para resistencia a la intemperie y salinidad del terreno.">
+        <div class="card-bg">
+          <img src="images/campo santo.jpg" alt="Campo Santo Parque del Recuerdo" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Infraestructura</div>
+        <div class="card-body">
+          <h3 class="card-title">Parque del Recuerdo</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 6 -->
+      <article class="project-card" 
+        data-category="educacion"
+        data-category-name="Educación"
+        data-title="Francisco de Asís"
+        data-image="images/p-franciscodeasis.jpg"
+        data-location="Tacna"
+        data-type="Concreto Premezclado 210 y 245 kg/cm²"
+        data-desc="Infraestructura educativa moderna con control estricto de probetas y ensayos de rotura en laboratorio en cada despacho programado.">
+        <div class="card-bg">
+          <img src="images/p-franciscodeasis.jpg" alt="Francisco de Asís" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Educación</div>
+        <div class="card-body">
+          <h3 class="card-title">Francisco de Asís</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 7 -->
+      <article class="project-card" 
+        data-category="educacion"
+        data-category-name="Educación"
+        data-title="Coar Tacna"
+        data-image="images/p-coartacna.jpg"
+        data-location="Tacna"
+        data-type="Vigas y columnas 280 kg/cm²"
+        data-desc="Obra emblemática regional con especificaciones de alta resistencia sísmica, vaciado continuo y servicio de bombeo especializado en altura.">
+        <div class="card-bg">
+          <img src="images/p-coartacna.jpg" alt="Coar Tacna" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Educación</div>
+        <div class="card-body">
+          <h3 class="card-title">Coar Tacna</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 8 -->
+      <article class="project-card" 
+        data-category="comercial"
+        data-category-name="Comercial"
+        data-title="Takana Beach"
+        data-image="images/p-takanabeach.jpg"
+        data-location="Boca del Río / Litoral Tacna"
+        data-type="Concreto Marino / Anti-Sulfatos f'c 280 kg/cm²"
+        data-desc="Proyecto comercial y recreativo costero con mezcla diseñada contra la corrosión salina y la exposición constante a la brisa marina del litoral.">
+        <div class="card-bg">
+          <img src="images/p-takanabeach.jpg" alt="Takana Beach" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Comercial</div>
+        <div class="card-body">
+          <h3 class="card-title">Takana Beach</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 9 -->
+      <article class="project-card" 
+        data-category="estructuras"
+        data-category-name="Estructuras"
+        data-title="Losas Aligeradas"
+        data-image="images/p-losasaligerada.jpg"
+        data-location="Tacna"
+        data-type="Concreto Bombeado f'c 210 kg/cm²"
+        data-desc="Vaciado rápido y uniforme de techos y entrepisos con asesoría técnica permanente en obra para asegurar un llenado perfecto sin cangrejeras.">
+        <div class="card-bg">
+          <img src="images/p-losasaligerada.jpg" alt="Losas aligeradas" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Estructuras</div>
+        <div class="card-body">
+          <h3 class="card-title">Losas Aligeradas</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 10 -->
+      <article class="project-card" 
+        data-category="estructuras"
+        data-category-name="Estructuras"
+        data-title="Zapatas y Cimientos"
+        data-image="images/p-zapatas.jpg"
+        data-location="Tacna"
+        data-type="Concreto Masivo f'c 210 y 280 kg/cm²"
+        data-desc="Cimentación estructural de gran volumen con dosificación óptima y colocación eficiente para garantizar la estabilidad de toda la edificación.">
+        <div class="card-bg">
+          <img src="images/p-zapatas.jpg" alt="Zapatas" loading="lazy">
+        </div>
+        <div class="card-overlay"></div>
+        <div class="card-tag">Estructuras</div>
+        <div class="card-body">
+          <h3 class="card-title">Zapatas y Cimientos</h3>
+          <div class="card-action">
+            <span>Ver Más</span>
+            <span class="action-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FRANJA DE GARANTÍA Y CALIDAD TÉCNICA -->
+<section class="proyectos-guarantee">
+  <div class="wrap">
+    <div class="section-head reveal in" style="margin-bottom: 36px;">
+      <div class="eyebrow">Compromiso en Obra</div>
+      <h2>Estándar de Calidad en Cada Despacho</h2>
+    </div>
+    <div class="guarantee-grid reveal in">
+      <div class="guarantee-card">
+        <div class="guarantee-icon">✓</div>
+        <div>
+          <h3>Normas Técnicas NTP & ASTM</h3>
+          <p>Diseño de mezcla formulado con agregados seleccionados y ensayos continuos de probetas de concreto.</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">⏱</div>
+        <div>
+          <h3>Flota Propia y Puntualidad</h3>
+          <p>Camiones mixer propios y logística coordinada para garantizar vaciados sin interrupciones ni demoras.</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">★</div>
+        <div>
+          <h3>Acompañamiento en Sitio</h3>
+          <p>Asesoría técnica desde la prueba de slump hasta el acabado y recomendaciones de curado.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section style="padding-top:0;">
+<section style="padding: 70px 0 80px;">
   <div class="wrap">
-    <div class="pedido-card reveal" style="max-width:720px; margin:0 auto; text-align:center; align-items:center;">
-      <h2 style="font-size:clamp(1.6rem,2.6vw,2.1rem);">¿Tu próxima obra necesita concreto premezclado?</h2>
-      <p style="max-width:520px;">Cuéntanos el volumen, la resistencia y la fecha de vaciado. Coordinamos contigo por WhatsApp en minutos.</p>
-      <a class="btn btn-solid" href="pedido.html">Pedir concreto ahora →</a>
+    <div class="pedido-card reveal in" style="max-width:760px; margin:0 auto; text-align:center; align-items:center;">
+      <div class="eyebrow" style="margin: 0 auto 10px;">Comienza tu proyecto</div>
+      <h2 style="font-size:clamp(1.7rem,2.8vw,2.3rem);">¿Tu próxima obra necesita concreto premezclado de calidad?</h2>
+      <p style="max-width:540px; margin: 12px auto 24px;">Cuéntanos el elemento estructural, el volumen estimado y la fecha de vaciado. Coordinamos contigo en minutos.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+        <a class="btn btn-solid" href="pedido.html">Pedir concreto ahora →</a>
+        <a class="btn" href="https://wa.me/51944440455?text=Hola%20Cautiva!%20Quisiera%20cotizar%20concreto%20premezclado%20para%20un%20proyecto." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- LIGHTBOX / MODAL DE PROYECTO -->
+<div class="project-modal" id="project-modal" aria-hidden="true" role="dialog">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-dialog">
+    <button class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar ventana">&times;</button>
+    <div class="modal-image-wrap">
+      <img id="modal-img" src="" alt="Detalle del proyecto">
+    </div>
+    <div class="modal-content-wrap">
+      <span class="modal-tag" id="modal-tag">Categoría</span>
+      <h2 class="modal-title" id="modal-title">Nombre del Proyecto</h2>
+      
+      <div class="modal-specs-grid">
+        <div class="spec-item">
+          <span class="spec-label">Ubicación</span>
+          <span class="spec-val" id="modal-location">Tacna, Perú</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Especificación Técnica</span>
+          <span class="spec-val" id="modal-type">Concreto Premezclado</span>
+        </div>
+      </div>
+
+      <p class="modal-description" id="modal-desc">Descripción del proyecto suministrado por Cautiva Concretos.</p>
+      
+      <div class="modal-actions">
+        <a id="modal-cta-whatsapp" class="btn btn-solid" href="#" target="_blank" rel="noopener">
+          Cotizar concreto similar para mi obra →
+        </a>
+        <a class="btn" href="pedido.html">Ir al formulario de pedido</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- CONTACTO -->
 <section class="contacto">
   <div class="bg"><img src="images/fondoo.jpg" alt="Equipo Cautiva en obra"></div>
   <div class="wrap contacto-inner">
-    <div class="contacto-top reveal">
+    <div class="contacto-top reveal in">
       <div>
         <h2>Hablemos de<br>tu próximo vaciado.</h2>
         <p class="lead">Cuéntanos el elemento estructural, el volumen y la fecha. Te ayudamos a definir la mezcla correcta para tu obra.</p>
@@ -111,8 +446,8 @@
         <div class="phone-line"><small>También</small>977 460 112</div>
         <div class="social-row">
           <a href="https://wa.me/51944440455" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/whatsapp.png" alt=""></a>
-          <a href="https://www.facebook.com/profile.php?id=100084069887328" aria-label="Facebook"><img src="images/facebook.webp" alt=""></a>
-          <a href="https://www.tiktok.com/@cautiva_pe?is_from_webapp=1&sender_device=pc" aria-label="TikTok"><img src="images/tiktok.png" alt=""></a>
+          <a href="https://www.facebook.com/profile.php?id=100084069887328" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.webp" alt=""></a>
+          <a href="https://www.tiktok.com/@cautiva_pe?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><img src="images/tiktok.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -124,5 +459,94 @@
 </section>
 
 <script src="js/main.js"></script>
+<script>
+// Lógica interactiva para la galería y el modal de proyectos
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.project-card');
+  const chips = document.querySelectorAll('.filter-chip');
+  const counterEl = document.getElementById('visible-count');
+  
+  const modal = document.getElementById('project-modal');
+  const backdrop = document.getElementById('modal-backdrop');
+  const closeBtn = document.getElementById('modal-close-btn');
+  const modalImg = document.getElementById('modal-img');
+  const modalTag = document.getElementById('modal-tag');
+  const modalTitle = document.getElementById('modal-title');
+  const modalLocation = document.getElementById('modal-location');
+  const modalType = document.getElementById('modal-type');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalCta = document.getElementById('modal-cta-whatsapp');
+
+  // Filtro de proyectos
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const filter = chip.getAttribute('data-filter');
+      let visible = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'todos' || cat === filter) {
+          card.classList.remove('is-hidden');
+          card.classList.remove('anim-in');
+          void card.offsetWidth; // Trigger reflow
+          card.classList.add('anim-in');
+          visible++;
+        } else {
+          card.classList.add('is-hidden');
+        }
+      });
+
+      if (counterEl) counterEl.textContent = visible;
+    });
+  });
+
+  // Abrir Modal de Proyecto
+  function openProjectModal(card) {
+    const title = card.getAttribute('data-title') || '';
+    const tag = card.getAttribute('data-category-name') || '';
+    const img = card.getAttribute('data-image') || '';
+    const location = card.getAttribute('data-location') || 'Tacna, Perú';
+    const type = card.getAttribute('data-type') || 'Concreto Premezclado';
+    const desc = card.getAttribute('data-desc') || '';
+
+    modalImg.src = img;
+    modalImg.alt = title;
+    modalTag.textContent = tag;
+    modalTitle.textContent = title;
+    modalLocation.textContent = location;
+    modalType.textContent = type;
+    modalDesc.textContent = desc;
+
+    const msg = encodeURIComponent(`¡Hola Cautiva! 👋 Vi el proyecto "${title}" en su sitio web y me gustaría cotizar concreto similar para mi obra.`);
+    modalCta.href = `https://wa.me/51944440455?text=${msg}`;
+
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => openProjectModal(card));
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});
+</script>
 </body>
 </html>

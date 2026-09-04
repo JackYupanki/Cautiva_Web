@@ -27,15 +27,12 @@ if (pedidoForm) {
     const telefono = get('telefono');
     const empresa = get('empresa');
     const direccion = get('direccion');
-    const resistencia = get('resistencia');
-    const volumen = get('volumen');
     const fecha = get('fecha');
     const hora = get('hora');
-    const bombeo = get('bombeo');
     const comentarios = get('comentarios');
 
     // validación simple de campos obligatorios
-    const requeridos = ['nombre', 'telefono', 'direccion', 'resistencia', 'volumen', 'fecha'];
+    const requeridos = ['nombre', 'telefono', 'direccion'];
     let valido = true;
     requeridos.forEach((campo) => {
       const val = get(campo);
@@ -56,18 +53,15 @@ if (pedidoForm) {
     }) : '';
 
     const lineas = [
-      '¡Hola Cautiva! 👋 Quisiera hacer un pedido de concreto:',
+      '¡Hola Cautiva! 👋 Quisiera solicitar una cotización de concreto premezclado:',
       '',
       `*Nombre:* ${nombre}`,
       `*Teléfono:* ${telefono}`,
       empresa ? `*Empresa / obra:* ${empresa}` : null,
-      `*Dirección de obra:* ${direccion}`,
-      `*Resistencia:* ${resistencia}`,
-      `*Volumen aproximado:* ${volumen} m³`,
-      `*Fecha de vaciado:* ${fechaFmt}`,
+      `*Dirección o referencia:* ${direccion}`,
+      fechaFmt ? `*Fecha estimada de vaciado:* ${fechaFmt}` : null,
       hora ? `*Hora aproximada:* ${hora}` : null,
-      bombeo ? `*Bombeo:* ${bombeo}` : null,
-      comentarios ? `*Comentarios:* ${comentarios}` : null,
+      comentarios ? `*Comentarios / detalles:* ${comentarios}` : null,
     ].filter(Boolean);
 
     const mensaje = encodeURIComponent(lineas.join('\n'));
@@ -81,10 +75,10 @@ if (pedidoForm) {
   });
 }
 
-// ----- Filtro de proyectos (solo actúa si la página tiene chips de filtro) -----
+// ----- Filtro de proyectos legacy (solo actúa si existen .g-item) -----
 const filterChips = document.querySelectorAll('.filter-chip');
-if (filterChips.length) {
-  const galleryItems = document.querySelectorAll('.g-item');
+const galleryItems = document.querySelectorAll('.g-item');
+if (filterChips.length && galleryItems.length) {
   filterChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       filterChips.forEach((c) => c.classList.remove('active'));
