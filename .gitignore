@@ -13,3 +13,7 @@ Desktop.ini
 .idea/
 *.swp
 *~
+
+# Videos fuente pesados sin comprimir
+videos/DJI_0628.MP4
+videos/dji_fly_*
